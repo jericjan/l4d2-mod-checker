@@ -46,9 +46,12 @@ async def run(statements):
     print("Checking...")
     await asyncio.gather(*statements)    
     print(f"\n{Fore.YELLOW}Check complete!{Style.RESET_ALL}")
-    print("The following are gone from the workshop :(")
-    print('\n'.join(results))
-    move()  
+    if not results:
+        print("No missing mods found. Have a good day! :)")
+    else:
+        print("The following are gone from the workshop :(")
+        print('\n'.join(results))
+        move()  
 @retry(attempts=10, delay=3)    
 async def url_checker(id, results):
     async with aiohttp.ClientSession() as session:
