@@ -1,0 +1,4 @@
+aiohttp==3.8.1
+colorama==0.4.5
+requests==2.28.1
+retrying-async==2.0.0
