@@ -62,7 +62,8 @@ async def run(statements):
         print("The following are gone from the workshop :(")
         print("\n".join(results))
         move()
-
+    print("Press ENTER to exit the program.")
+    input()
 
 @retry(attempts=10, delay=3)
 async def url_checker(mod_id, results):

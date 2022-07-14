@@ -1,3 +1,7 @@
 venv/
 git.lnk
 venv.lnk
+__pycache__/
+build/
+dist/
+ 
